@@ -1,0 +1,294 @@
+/*--chat--*/
+/*--即时通讯--*/
+.rfixed{
+    position: fixed;
+    right: 10px;
+    bottom:80px;
+    z-index: 99999;
+}
+.talk{
+    background-color: #fff;
+    font-size: 14px;
+    overflow: hidden;
+    /*border-radius: .25rem;*/
+    outline: none;
+    box-shadow: 0px 1px 3px #c6c8ca;
+    z-index:2;
+}
+.talk-head{
+    background-color: #ff8e2b;
+    height: 40px;
+    width: 0;
+    cursor: pointer;
+    color: #ffffff;
+    line-height: 40px;
+    position: relative;
+}
+
+.talk-head .close{
+    color: #ffffff;
+    line-height: 35px;
+}
+.talk-head .slide-chat{
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.talk-head .slide-chat:hover{
+    color: #ffffff99;
+}
+.talk-body{
+    width: 360px;
+    display: none;
+}
+.talk-panel{
+    height: 400px;
+    /*overflow-y: scroll;*/
+    overflow:auto;
+    padding: 0 15px 0 15px;
+    background: #efefef;
+}
+.talk-panel::-webkit-scrollbar {
+    display: none!important;
+}
+.talk-panel p{
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+.card-text{
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.card-text-yonghu{
+    position: relative;
+    text-align: right;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.card-text img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.card-text-yonghu img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.card-text span, .card-text-yonghu span{
+    display: inline-block;
+    background: white;
+    line-height: 20px;
+    margin-left: 50px;
+    position: relative;
+    vertical-align: top;
+    padding: 10px;
+    border:1px solid #efefef;
+}
+.card-text-yonghu span{
+    display: inline-block;
+    margin-right: 50px!important;
+    margin-left: 0;
+    text-align: left;
+}
+.card-text .jiantou::before{
+    display:block;
+    content:'';
+    border-width:8px 8px 0px 8px;
+    border-style:solid;
+    border-color: transparent #ffffff transparent  transparent ;
+    /* 定位 */
+    position:absolute;
+    left:-15px;
+    bottom:0;
+    z-index: 99999;
+}
+.card-text-yonghu .jiantou::before{
+    display:block;
+    content:'';
+    border-width:8px 8px 0px 8px;
+    border-style:solid;
+    border-color: transparent transparent transparent #ffffff;
+    /* 定位 */
+    position:absolute;
+    right:-15px;
+    bottom:0;
+    z-index: 99999;
+}
+.chat-tipsxinxi{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.chat-tips{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.08);
+    padding: 4px 8px;
+    line-height: 1;
+    color: #7c7c7c;
+    border-radius: 2px;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 100%, 0.6);
+    margin: 0 auto;
+}
+.card-text-title{
+    background: white;
+    width: 100%;
+    margin: 20px auto;
+    padding: 5px;
+    color: #666666;
+}
+
+
+.talk-input{
+    border: 1px solid #c6c8ca;
+    height: 110px;
+}
+.talk-content{
+    padding: 5px 5px 5px 5px;
+    overflow: auto;
+    height: 50%;
+    outline: none;
+}
+
+.talk-content::-webkit-scrollbar {
+    display: none!important;
+}
+.talk-content:empty::before {
+    content: attr(placeholder);
+    color: #999999;
+    font-size: 12px;
+}
+.talk-tools{
+    /*height: 40%;*/
+}
+.talk-tools i{
+    line-height: 42px;
+}
+.talk-emo{
+    /*width: 350px;*/
+    height: 200px;
+    border:1px solid #ccc;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    display: none;
+    padding-top: 10px;
+}
+.talk-emo .row{
+    width: 350px;
+    margin: 0px;
+}
+.talk-emo .row .text-center a img{
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+    border: 1px solid transparent;
+    float: left;
+}
+.talk-emo .row .text-center a img:hover{
+    border: 1px solid red;
+}
+.biaoqing{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+.text-dark{
+    color: #343a40!important;
+    margin-left: 10px;
+}
+.h-25 {
+    height: 50%!important;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+.mr-1, .mx-1 {
+    margin-right: .25rem!important;
+}
+.float-right{
+    float: right;
+    width: 50px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 5px;
+    background: #21d376;
+    color: white;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/*--客服--*/
+.livechat-girl {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom:85px;
+    right: 10px;
+    z-index: 700;
+    cursor: pointer;
+}
+
+.livechat-girl:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ff8e2b, #ff8e2b);
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    z-index: 50;
+}
+
+.livechat-girl .girl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 50;
+}
+
+.livechat-girl .livechat-hint {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.rd-notice-type-success .rd-notice-content {
+    background-color: #ff8e2b;
+}
+
+.rd-notice-tooltip.single-line .rd-notice-content {
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    white-space: nowrap;
+    color: white;
+}
+.rd-notice-tooltip.single-line .rd-notice-content::before{
+    display:block;
+    content:'';
+    border-width:8px 8px 8px 8px;
+    border-style:solid;
+    border-color: transparent transparent  transparent #ff8e2b;
+    /* 定位 */
+    position:absolute;
+    right:-15px;
+    top:30%;
+}
+/*--客服 end--*/
+
+/*--即时通讯 end--*/
+
+/*--chat end--*/

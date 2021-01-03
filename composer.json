@@ -1,0 +1,20 @@
+{
+    "name": "pleidy/chat",
+    "description": "this is a chat project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pleidy",
+            "email": "pleidy@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4":{
+            "core\\": "core",
+            "src\\": "src"
+        }
+    }
+}

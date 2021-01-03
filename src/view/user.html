@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我是用户</title>
+    <link rel="stylesheet" href="/chat/src/public/css/chat.css">
+    <link rel="stylesheet" href="/chat/src/public/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="livechat-girl animated">
+        <img class="girl" src="/chat/src/public/images/gzh-touxiang2.png" alt="">
+        <div class="livechat-hint rd-notice-tooltip rd-notice-type-success rd-notice-position-left single-line show_hint">
+            <div class="rd-notice-content">嘿，我来帮您！</div>
+        </div>
+    </div>
+
+    <div class="rfixed navbar navbar-expand-lg p-0">
+        <div class="talk">
+            <div class="talk-head">
+                &nbsp;&nbsp;&nbsp;<span id="name">在线客服</span>
+                <i class="slide-chat fa fa-caret-down mx-1 my-1" aria-hidden="true"></i>
+            </div>
+            <div class="talk-body">
+                <div class="talk-panel">
+                    <p class="card-text-title">客服也是人！！</p>
+                    <p class="infix" hidden></p>
+                </div>
+                <div class="talk-input">
+                    <div style="height: 10px;"></div>
+                    <div id="content" class="talk-content"  contenteditable="true" aria-placeholder="请输入您的问题"></div>
+                    <div class="talk-tools">
+                        <div class="talk-emo"><div class="row"></div></div>
+                        <a class="click-emo" href="JavaScript:void(0);">
+                            <i class="fa fa-smile-o fa-lg mr-1 text-dark" aria-hidden="true"></i>
+                        </a>
+                        <button class="btn-sm float-right" onclick="func.send()">发送</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/chat/src/public/js/jquery.min.js"></script>
+    <script src="/chat/src/public/js/websk.js"></script>
+    <script src="/chat/src/public/js/chat.js"></script>
+    <script>
+        // chat
+        json_adr = "/chat/src/public/json/emoName.json";
+
+        if (func.from.indexOf('user')) {
+            func.headImg = "/chat/src/public/images/gzh-touxiang2.png";
+        } else {
+            func.headImg = "/chat/src/public/images/touxiang.png";
+        }
+
+        func.curHeadImg = "/chat/src/public/images/gzh-touxiang2.png";
+        func.tarHeadImg = "/chat/src/public/images/touxiang.png";
+
+        $('.livechat-girl').click(function () {
+            var key = func.soleKey();
+            func.from = key + "_user";
+            func.to = '{{ $to }}';
+            func.type = 'user';
+
+            // func.openChat("{{ route('info') }}");
+        });
+    </script>
+</body>
+</html>
+
